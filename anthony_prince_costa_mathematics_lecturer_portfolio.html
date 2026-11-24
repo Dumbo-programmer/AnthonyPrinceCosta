@@ -1,0 +1,1451 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Academic Portfolio of Anthony Prince Costa, Lecturer in Mathematics at St. Joseph Higher Secondary School (2012–Present), Chief Moderator of Josephite Math Club." />
+
+  <!-- Google Fonts: Cormorant Garamond, Space Grotesk, Plus Jakarta Sans, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            indigoDeep: '#16115E',
+            indigoAbyss: '#0F0B46',
+            cobalt: '#3730AA',
+            coral: '#FF653F',
+            gold: '#FFC85C',
+            ivory: '#F8FAFC',
+            slateSoft: '#E2E8F0',
+          },
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            display: ['"Space Grotesk"', 'sans-serif'],
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    :root {
+      --bg-primary: #16115E;
+      --bg-abyss: #0F0B46;
+      --surface-cobalt: #3730AA;
+      --accent-coral: #FF653F;
+      --accent-gold: #FFC85C;
+      --text-ivory: #F8FAFC;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      background-color: var(--bg-primary);
+      color: var(--text-ivory);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      overflow-x: hidden;
+      max-width: 100vw;
+    }
+
+    /* Refined Precision Scrollbar */
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0F0B46;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #3730AA;
+      border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #FF653F;
+    }
+
+    /* Subtle Architectural Coordinate Grid */
+    .subtle-math-grid {
+      background-image:
+        linear-gradient(to right, rgba(55, 48, 170, 0.22) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(55, 48, 170, 0.22) 1px, transparent 1px);
+      background-size: 64px 64px;
+    }
+
+    /* Editorial Link Underline */
+    .nav-underline {
+      position: relative;
+    }
+    .nav-underline::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -3px;
+      width: 100%;
+      height: 1.5px;
+      background-color: #FF653F;
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .nav-underline:hover::after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+
+    /* Clean Architectural Card Elevation */
+    .academic-card {
+      background-color: rgba(15, 11, 70, 0.85);
+      border: 1px solid rgba(55, 48, 170, 0.85);
+      box-shadow: 0 18px 40px -15px rgba(7, 5, 34, 0.7);
+    }
+  </style>
+</head>
+<body class="subtle-math-grid selection:bg-coral selection:text-indigoAbyss antialiased">
+
+  <!-- ===================================================================== -->
+  <!-- CLEAN ARCHITECTURAL NAVIGATION BAR                                    -->
+  <!-- ===================================================================== -->
+  <header class="sticky top-0 z-50 bg-indigoAbyss/90 backdrop-blur-md border-b border-cobalt/70">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <!-- Brand Identity -->
+      <a href="#hero" class="flex items-center gap-3 group">
+        <span class="w-9 h-9 rounded-lg border border-gold/60 bg-indigoDeep flex items-center justify-center font-serif italic text-2xl text-gold group-hover:border-coral group-hover:text-coral transition-colors">
+          ∑
+        </span>
+        <div>
+          <span class="block font-serif text-lg sm:text-xl font-bold tracking-tight text-ivory leading-none">
+            Anthony Prince Costa
+          </span>
+          <span class="block font-mono text-[10px] tracking-widest uppercase text-gold/80 mt-0.5">
+            St. Joseph H.S.S. · Mathematics
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop Links -->
+      <nav class="hidden md:flex items-center gap-6 lg:gap-7 font-mono text-[11px] uppercase tracking-widest text-slateSoft/80">
+        <a href="#tenure" class="nav-underline hover:text-gold transition-colors">Tenure</a>
+        <a href="#leadership" class="nav-underline hover:text-gold transition-colors">Math Club</a>
+        <a href="#education" class="nav-underline hover:text-gold transition-colors">Lineage</a>
+        <a href="#domains" class="nav-underline hover:text-gold transition-colors">Domains</a>
+        <a href="#gallery" class="nav-underline hover:text-gold transition-colors">Gallery</a>
+        <a href="#contact" class="nav-underline hover:text-gold transition-colors">Contact</a>
+      </nav>
+
+      <!-- Direct Call CTA & Mobile Trigger -->
+      <div class="flex items-center gap-2.5">
+        <a href="tel:+8801720242606" class="font-mono text-xs font-semibold px-3.5 py-2 rounded-lg bg-coral text-indigoAbyss hover:bg-gold transition-colors">
+          +880 1720-242606
+        </a>
+        <button id="mobile-menu-btn" aria-label="Toggle Menu" class="md:hidden w-9 h-9 rounded-lg border border-cobalt bg-indigoDeep flex flex-col items-center justify-center gap-1.5 text-ivory hover:border-coral">
+          <span class="w-4 h-0.5 bg-gold"></span>
+          <span class="w-4 h-0.5 bg-coral"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-indigoAbyss border-b border-cobalt px-4 py-4 space-y-2 font-mono text-xs uppercase tracking-widest">
+      <a href="#tenure" class="block py-2 text-slateSoft hover:text-gold border-b border-cobalt/40">01. Academic Tenure & Philosophy</a>
+      <a href="#leadership" class="block py-2 text-slateSoft hover:text-gold border-b border-cobalt/40">02. Josephite Math Club (Chief Moderator)</a>
+      <a href="#education" class="block py-2 text-slateSoft hover:text-gold border-b border-cobalt/40">03. Academic Lineage</a>
+      <a href="#domains" class="block py-2 text-slateSoft hover:text-gold border-b border-cobalt/40">04. Core Mathematical Domains</a>
+      <a href="#gallery" class="block py-2 text-slateSoft hover:text-gold border-b border-cobalt/40">05. Campus & Club Gallery</a>
+      <a href="#contact" class="block py-2 text-gold font-semibold">06. Direct Contact</a>
+    </div>
+  </header>
+
+  <!-- ===================================================================== -->
+  <!-- BANGER HERO SECTION: CLEAN, UNCLUTTERED, MOBILE & LAPTOP READY        -->
+  <!-- ===================================================================== -->
+  <section id="hero" class="relative min-h-[calc(100vh-4rem)] flex items-center border-b border-cobalt/70 overflow-hidden">
+    <!-- Calm, Low-Opacity Parametric Mathematical Curve Canvas -->
+    <canvas id="hero-canvas" class="absolute inset-0 w-full h-full pointer-events-none opacity-65"></canvas>
+
+    <!-- Soft Radial Legibility Gradient -->
+    <div class="absolute inset-0 pointer-events-none bg-gradient-to-b from-indigoAbyss/50 via-transparent to-indigoAbyss/80"></div>
+
+    <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16 w-full">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+
+        <!-- LEFT COLUMN: EXECUTIVE ACADEMIC IDENTITY (7 COLS) -->
+        <div class="lg:col-span-7 space-y-5 sm:space-y-6 order-2 lg:order-1 text-center lg:text-left">
+          <!-- Institutional Tenure & Leadership Pill -->
+          <div class="inline-flex flex-wrap items-center justify-center lg:justify-start gap-2 px-3.5 py-1.5 rounded-full border border-cobalt bg-indigoAbyss/90 font-mono text-[11px] sm:text-xs tracking-wider text-gold">
+            <span class="w-2 h-2 rounded-full bg-coral"></span>
+            <span>ST. JOSEPH HIGHER SECONDARY SCHOOL • 2012 – PRESENT</span>
+          </div>
+
+          <!-- Display Name & Academic Rank -->
+          <div class="space-y-2">
+            <h1 class="font-serif text-4xl sm:text-6xl lg:text-[66px] font-bold leading-[1.03] tracking-tight text-ivory">
+              Anthony Prince <span class="italic text-gold">Costa</span>
+            </h1>
+            <p class="font-serif text-lg sm:text-xl lg:text-2xl italic text-gold/85">
+              St. Joseph Higher Secondary School, Dhaka
+            </p>
+            <p class="font-mono text-xs sm:text-sm uppercase tracking-[0.16em] text-coral font-semibold pt-1">
+              Lecturer in Mathematics · Chief Moderator, Josephite Math Club
+            </p>
+          </div>
+
+          <!-- Dignified Academic & Mentorship Statement -->
+          <p class="text-sm sm:text-base lg:text-[17px] text-slateSoft/90 max-w-xl mx-auto lg:mx-0 leading-relaxed">
+            Dedicated to cultivating rigorous mathematical reasoning, geometric intuition, and student leadership—guiding scholars from foundational axioms in the lecture hall to organizing national mathematics festivals and Olympiads.
+          </p>
+
+          <!-- Clean Primary & Secondary CTAs -->
+          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-3.5 pt-1">
+            <a href="#leadership" class="px-6 py-3 rounded-lg bg-coral text-indigoAbyss font-mono text-xs sm:text-sm font-semibold uppercase tracking-wider hover:bg-gold transition-colors shadow-lg shadow-coral/20">
+              Math Club & Mentorship
+            </a>
+            <a href="#domains" class="px-6 py-3 rounded-lg border border-gold/80 bg-indigoAbyss/80 text-gold font-mono text-xs sm:text-sm font-semibold uppercase tracking-wider hover:bg-gold hover:text-indigoAbyss transition-colors">
+              Explore Domains
+            </a>
+          </div>
+
+          <!-- Subtle Academic Credentials Strip -->
+          <div class="pt-3 flex flex-wrap items-center justify-center lg:justify-start gap-x-5 gap-y-2 font-mono text-xs text-slateSoft/65">
+            <span>Jagannath University</span>
+            <span class="text-cobalt">•</span>
+            <span>Notre Dame College, Dhaka</span>
+            <span class="text-cobalt">•</span>
+            <a href="https://www.facebook.com/princejuboraj" target="_blank" rel="noopener noreferrer" class="text-gold/90 hover:text-coral transition-colors">
+              fb.com/princejuboraj ↗
+            </a>
+          </div>
+        </div>
+
+        <!-- RIGHT COLUMN: EMPHASIZED PORTRAIT WITH POLAR RETICLE FRAME (5 COLS) -->
+        <div class="lg:col-span-5 flex flex-col items-center justify-center order-1 lg:order-2">
+          <div class="relative w-[270px] h-[270px] sm:w-[350px] sm:h-[350px] lg:w-[420px] lg:h-[420px] flex items-center justify-center">
+            <!-- Warm halo that draws the eye straight to the portrait -->
+            <div class="absolute inset-[-12%] rounded-full bg-gold/10 blur-3xl pointer-events-none"></div>
+
+            <!-- Geometric polar & cartesian frame, with the portrait as the dominant element -->
+            <svg viewBox="0 0 360 360" class="relative w-full h-full overflow-visible drop-shadow-[0_18px_35px_rgba(7,5,34,0.65)]">
+              <defs>
+                <clipPath id="portraitClip">
+                  <circle cx="180" cy="180" r="150" />
+                </clipPath>
+                <radialGradient id="portraitVignette" cx="50%" cy="38%" r="68%">
+                  <stop offset="55%" stop-color="#0F0B46" stop-opacity="0" />
+                  <stop offset="100%" stop-color="#0F0B46" stop-opacity="0.5" />
+                </radialGradient>
+              </defs>
+
+              <!-- Cartesian Reference Hairlines -->
+              <line x1="8" y1="180" x2="352" y2="180" stroke="#3730AA" stroke-width="1" opacity="0.8" />
+              <line x1="180" y1="8" x2="180" y2="352" stroke="#3730AA" stroke-width="1" opacity="0.8" />
+
+              <!-- Outer Cobalt Ring & Gold Polar Coordinate Ring -->
+              <circle cx="180" cy="180" r="172" fill="none" stroke="#3730AA" stroke-width="1.5" />
+              <circle cx="180" cy="180" r="162" fill="none" stroke="#FFC85C" stroke-width="1.25" stroke-dasharray="3 7" opacity="0.9" />
+
+              <!-- Coral Accent Arc (First Quadrant) -->
+              <path d="M 180 8 A 172 172 0 0 1 352 180" fill="none" stroke="#FF653F" stroke-width="2.6" />
+
+              <!-- Cardinal Coordinate Ticks -->
+              <circle cx="180" cy="8" r="4" fill="#FF653F" />
+              <circle cx="352" cy="180" r="4" fill="#FFC85C" />
+              <circle cx="8" cy="180" r="3.5" fill="#3730AA" />
+              <circle cx="180" cy="352" r="3.5" fill="#3730AA" />
+
+              <!-- Enlarged Portrait Disc -->
+              <circle cx="180" cy="180" r="152" fill="#0F0B46" stroke="#FFC85C" stroke-width="2.25" />
+              <g clip-path="url(#portraitClip)">
+                <image
+                  href="image_f6bf00.jpeg"
+                  x="30"
+                  y="30"
+                  width="300"
+                  height="300"
+                  preserveAspectRatio="xMidYMin slice"
+                  onerror="this.style.display='none'"
+                />
+                <circle cx="180" cy="180" r="150" fill="url(#portraitVignette)" />
+                <circle cx="180" cy="180" r="150" fill="none" stroke="#16115E" stroke-width="6" opacity="0.4" />
+              </g>
+            </svg>
+
+            <!-- Tenure & Chief Moderator Badge -->
+            <div class="absolute -bottom-4 z-20 bg-indigoAbyss border border-gold/80 px-5 py-2 rounded-full shadow-[0_0_28px_rgba(255,200,92,0.25)] flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-coral"></span>
+              <span class="font-mono text-[11px] sm:text-xs font-semibold text-gold tracking-wide whitespace-nowrap">
+                Chief Moderator · Josephite Math Club
+              </span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================== -->
+  <!-- SECTION 01: ACADEMIC TENURE & PEDAGOGICAL APPROACH                    -->
+  <!-- ===================================================================== -->
+  <section id="tenure" class="py-16 sm:py-24 border-b border-cobalt/70 bg-indigoDeep/60">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Section Heading -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 pb-10 border-b border-cobalt/70">
+        <div>
+          <span class="font-mono text-xs text-coral uppercase tracking-widest block mb-2">
+            01 // ACADEMIC TENURE & PHILOSOPHY
+          </span>
+          <h2 class="font-serif text-3xl sm:text-5xl font-bold text-ivory">
+            Twelve-Plus Years at <span class="italic text-gold">St. Joseph</span>
+          </h2>
+        </div>
+        <div class="font-mono text-xs sm:text-sm text-gold bg-indigoAbyss border border-cobalt px-4 py-2 rounded-lg">
+          Lecturer in Mathematics · 2012 – Present
+        </div>
+      </div>
+
+      <!-- Dignified Editorial Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 pt-10 items-start">
+        <!-- Main Narrative (7 Cols) -->
+        <div class="lg:col-span-7 academic-card rounded-xl p-6 sm:p-8 space-y-5">
+          <div class="flex items-center justify-between border-b border-cobalt/60 pb-3 font-mono text-xs text-gold">
+            <span>ST. JOSEPH HIGHER SECONDARY SCHOOL · DHAKA</span>
+            <span class="text-coral">DEPT. OF MATHEMATICS</span>
+          </div>
+
+          <p class="text-slateSoft/90 text-sm sm:text-base leading-relaxed">
+            Since joining <strong class="text-ivory font-semibold">St. Joseph Higher Secondary School</strong> in <strong class="text-gold font-mono">2012</strong>, <strong class="text-ivory font-semibold">Anthony Prince Costa</strong> has dedicated his academic career to teaching the enduring principles of pure and applied mathematics.
+          </p>
+
+          <p class="text-slateSoft/85 text-sm sm:text-base leading-relaxed">
+            In his lectures, abstract symbolic expressions are consistently anchored to their geometric and physical meaning—inviting students to appreciate <em>why</em> a theorem holds from first principles rather than relying on rote mechanical procedures.
+          </p>
+
+          <!-- Three Pillars Row -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4 border-t border-cobalt/60">
+            <div>
+              <div class="font-mono text-xs text-coral font-semibold mb-1">I. CLARITY</div>
+              <p class="text-xs text-slateSoft/80 leading-relaxed">Geometric visualization before symbolic manipulation.</p>
+            </div>
+            <div>
+              <div class="font-mono text-xs text-gold font-semibold mb-1">II. RIGOR</div>
+              <p class="text-xs text-slateSoft/80 leading-relaxed">First-principles derivations grounded in logical proof.</p>
+            </div>
+            <div>
+              <div class="font-mono text-xs text-coral font-semibold mb-1">III. DEPTH</div>
+              <p class="text-xs text-slateSoft/80 leading-relaxed">Connecting analysis, algebra, and physical mechanics.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Clean Key Metrics Column (5 Cols) -->
+        <div class="lg:col-span-5 space-y-4">
+          <div class="academic-card rounded-xl p-6 flex items-center justify-between">
+            <div>
+              <span class="font-mono text-xs text-coral uppercase tracking-wider">Continuous Tenure</span>
+              <div class="font-serif text-3xl sm:text-4xl font-bold text-gold mt-1">2012 – Present</div>
+              <p class="text-xs text-slateSoft/75 mt-1">St. Joseph Higher Secondary School, Dhaka</p>
+            </div>
+            <span class="font-serif italic text-4xl text-cobalt select-none">∫dt</span>
+          </div>
+
+          <div class="academic-card rounded-xl p-6 flex items-center justify-between">
+            <div>
+              <span class="font-mono text-xs text-gold uppercase tracking-wider">Core Disciplines</span>
+              <div class="font-serif text-3xl sm:text-4xl font-bold text-ivory mt-1">Pure & Applied</div>
+              <p class="text-xs text-slateSoft/75 mt-1">Calculus, Linear Algebra, Geometry & Mechanics</p>
+            </div>
+            <span class="font-serif italic text-4xl text-cobalt select-none">∑∞</span>
+          </div>
+
+          <div class="academic-card rounded-xl p-6 flex items-center justify-between">
+            <div>
+              <span class="font-mono text-xs text-coral uppercase tracking-wider">Pedagogical Focus</span>
+              <div class="font-serif text-2xl sm:text-3xl font-bold text-gold mt-1">Axiomatic Mastery</div>
+              <p class="text-xs text-slateSoft/75 mt-1">Proof Construction · Analytical Modeling · Intuition</p>
+            </div>
+            <span class="font-serif italic text-4xl text-cobalt select-none">∇f</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================================================================== -->
+  <!-- SECTION 02: MENTORSHIP & JOSEPHITE MATH CLUB LEADERSHIP               -->
+  <!-- ===================================================================== -->
+  <section id="leadership" class="py-16 sm:py-24 border-b border-cobalt/70 bg-indigoAbyss/65">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Section Heading -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 pb-10 border-b border-cobalt/70">
+        <div>
+          <span class="font-mono text-xs text-gold uppercase tracking-widest block mb-2">
+            02 // STUDENT MENTORSHIP & CO-CURRICULAR LEADERSHIP
+          </span>
+          <h2 class="font-serif text-3xl sm:text-5xl font-bold text-ivory">
+            Chief Moderator, <span class="italic text-coral">Josephite Math Club</span>
+          </h2>
+        </div>
+        <div class="font-mono text-xs sm:text-sm text-coral bg-indigoDeep border border-cobalt px-4 py-2 rounded-lg">
+          JMC · Empowering Student Organizers
+        </div>
+      </div>
+
+      <!-- Leadership Narrative + 4 Structured Pillars -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 pt-10 items-stretch">
+
+        <!-- Left Editorial Spotlight (5 Cols) -->
+        <div class="lg:col-span-5 academic-card rounded-xl p-6 sm:p-8 border-gold/50 flex flex-col justify-between space-y-6">
+          <div class="space-y-4">
+            <div class="inline-flex items-center gap-2 font-mono text-xs text-gold uppercase tracking-wider">
+              <span class="w-2 h-2 rounded-full bg-gold"></span>
+              <span>INSTITUTIONAL MODERATION</span>
+            </div>
+
+            <h3 class="font-serif text-2xl sm:text-3xl font-bold text-ivory leading-snug">
+              Beyond the Lecture Hall: Building a Culture of Mathematical Inquiry
+            </h3>
+
+            <p class="text-sm text-slateSoft/90 leading-relaxed">
+              As <strong class="text-gold font-semibold">Chief Moderator of the Josephite Math Club (JMC)</strong>, Anthony Prince Costa serves as the primary faculty mentor to successive generations of student executive committees at St. Joseph Higher Secondary School.
+            </p>
+
+            <p class="text-sm text-slateSoft/85 leading-relaxed">
+              He works side by side with student leaders—guiding them through the full lifecycle of academic event organization, problem curation, logistics, and institutional representation so students develop both analytical poise and organizational leadership.
+            </p>
+          </div>
+
+          <div class="pt-4 border-t border-cobalt/60 flex items-center justify-between font-mono text-xs">
+            <span class="text-slateSoft/70">Club Role</span>
+            <span class="text-coral font-semibold">Chief Moderator · JMC</span>
+          </div>
+        </div>
+
+        <!-- Right 2x2 Architectural Grid of Club Initiatives (7 Cols) -->
+        <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div class="academic-card rounded-xl p-6 space-y-3 border-cobalt hover:border-coral/80 transition-colors">
+            <div class="flex items-center justify-between font-mono text-xs">
+              <span class="text-coral font-semibold">INITIATIVE 01</span>
+              <span class="font-serif italic text-2xl text-gold">Ω</span>
+            </div>
+            <h4 class="font-display text-lg font-semibold text-ivory">
+              National Math Festivals & Olympiads
+            </h4>
+            <p class="text-xs sm:text-sm text-slateSoft/80 leading-relaxed">
+              Mentoring student organizers in conceptualizing, structuring, and hosting flagship inter-school mathematics festivals, Olympiad rounds, and team relay competitions.
+            </p>
+          </div>
+
+          <div class="academic-card rounded-xl p-6 space-y-3 border-cobalt hover:border-gold/80 transition-colors">
+            <div class="flex items-center justify-between font-mono text-xs">
+              <span class="text-gold font-semibold">INITIATIVE 02</span>
+              <span class="font-serif italic text-2xl text-coral">Δ</span>
+            </div>
+            <h4 class="font-display text-lg font-semibold text-ivory">
+              Student Executive Governance
+            </h4>
+            <p class="text-xs sm:text-sm text-slateSoft/80 leading-relaxed">
+              Advising student presidents, secretaries, and academic coordinators on event planning, budget discipline, inter-institutional outreach, and stage management.
+            </p>
+          </div>
+
+          <div class="academic-card rounded-xl p-6 space-y-3 border-cobalt hover:border-gold/80 transition-colors">
+            <div class="flex items-center justify-between font-mono text-xs">
+              <span class="text-gold font-semibold">INITIATIVE 03</span>
+              <span class="font-serif italic text-2xl text-coral">π</span>
+            </div>
+            <h4 class="font-display text-lg font-semibold text-ivory">
+              Problem-Solving Workshops & Seminars
+            </h4>
+            <p class="text-xs sm:text-sm text-slateSoft/80 leading-relaxed">
+              Supervising peer-led problem-solving circles, combinatorics and geometry workshops, and guest lectures that nurture young mathematical talent on campus.
+            </p>
+          </div>
+
+          <div class="academic-card rounded-xl p-6 space-y-3 border-cobalt hover:border-coral/80 transition-colors">
+            <div class="flex items-center justify-between font-mono text-xs">
+              <span class="text-coral font-semibold">INITIATIVE 04</span>
+              <span class="font-serif italic text-2xl text-gold">∑</span>
+            </div>
+            <h4 class="font-display text-lg font-semibold text-ivory">
+              Academic Publications & Problem Sets
+            </h4>
+            <p class="text-xs sm:text-sm text-slateSoft/80 leading-relaxed">
+              Reviewing club journals, Olympiad problem booklets, and student-authored mathematical expositions to uphold scholarly accuracy and clarity.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================== -->
+  <!-- SECTION 03: ACADEMIC LINEAGE & EDUCATION                              -->
+  <!-- ===================================================================== -->
+  <section id="education" class="py-16 sm:py-24 border-b border-cobalt/70 bg-indigoDeep/60">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Section Heading -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 pb-10 border-b border-cobalt/70">
+        <div>
+          <span class="font-mono text-xs text-coral uppercase tracking-widest block mb-2">
+            03 // ACADEMIC LINEAGE & ALMA MATERS
+          </span>
+          <h2 class="font-serif text-3xl sm:text-5xl font-bold text-ivory">
+            Educational <span class="italic text-gold">Foundation</span>
+          </h2>
+        </div>
+        <div class="font-mono text-xs sm:text-sm text-slateSoft/80">
+          Formative Institutions in Mathematics & Science
+        </div>
+      </div>
+
+      <!-- Clean 3-Stage Architectural Pedigree Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-10">
+
+        <!-- 1. Jagannath University -->
+        <div class="academic-card rounded-xl p-6 sm:p-7 border-gold/60 relative flex flex-col justify-between space-y-5">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between font-mono text-xs">
+              <span class="px-2.5 py-1 rounded bg-coral text-indigoAbyss font-semibold">01 · UNIVERSITY</span>
+              <span class="text-gold">DHAKA</span>
+            </div>
+            <h3 class="font-serif text-2xl sm:text-3xl font-bold text-ivory leading-snug pt-1">
+              Jagannath University
+            </h3>
+            <p class="font-mono text-xs text-gold uppercase tracking-wider">
+              Higher Studies in Mathematics
+            </p>
+            <p class="text-xs sm:text-sm text-slateSoft/85 leading-relaxed pt-1">
+              Advanced university formation in pure and applied mathematics—building deep theoretical command in real and complex analysis, abstract algebra, differential equations, and mathematical modeling.
+            </p>
+          </div>
+          <div class="pt-3 border-t border-cobalt/60 flex items-center justify-between font-mono text-[11px] text-slateSoft/65">
+            <span>Discipline: Mathematics</span>
+            <span class="text-coral">Alumnus</span>
+          </div>
+        </div>
+
+        <!-- 2. Notre Dame College, Dhaka -->
+        <div class="academic-card rounded-xl p-6 sm:p-7 border-cobalt hover:border-gold/70 transition-colors relative flex flex-col justify-between space-y-5">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between font-mono text-xs">
+              <span class="px-2.5 py-1 rounded bg-cobalt text-ivory font-semibold">02 · COLLEGE</span>
+              <span class="text-gold">DHAKA</span>
+            </div>
+            <h3 class="font-serif text-2xl sm:text-3xl font-bold text-ivory leading-snug pt-1">
+              Notre Dame College, Dhaka
+            </h3>
+            <p class="font-mono text-xs text-coral uppercase tracking-wider">
+              Higher Secondary Education · Science
+            </p>
+            <p class="text-xs sm:text-sm text-slateSoft/85 leading-relaxed pt-1">
+              Formed within one of Bangladesh’s most storied academic traditions—cultivating intellectual discipline, analytical rigor, and a lifelong commitment to holistic student mentorship.
+            </p>
+          </div>
+          <div class="pt-3 border-t border-cobalt/60 flex items-center justify-between font-mono text-[11px] text-slateSoft/65">
+            <span>Track: Science & Mathematics</span>
+            <span class="text-gold">Alumnus</span>
+          </div>
+        </div>
+
+        <!-- 3. St. Patrick's Grammar School -->
+        <div class="academic-card rounded-xl p-6 sm:p-7 border-cobalt hover:border-gold/70 transition-colors relative flex flex-col justify-between space-y-5">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between font-mono text-xs">
+              <span class="px-2.5 py-1 rounded bg-cobalt text-ivory font-semibold">03 · SCHOOL</span>
+              <span class="text-gold">FOUNDATION</span>
+            </div>
+            <h3 class="font-serif text-2xl sm:text-3xl font-bold text-ivory leading-snug pt-1">
+              St. Patrick's Grammar School
+            </h3>
+            <p class="font-mono text-xs text-coral uppercase tracking-wider">
+              Secondary School Education
+            </p>
+            <p class="text-xs sm:text-sm text-slateSoft/85 leading-relaxed pt-1">
+              Early scholastic grounding in classical geometry, arithmetic reasoning, and structured academic inquiry—laying the bedrock for a career devoted to teaching mathematics.
+            </p>
+          </div>
+          <div class="pt-3 border-t border-cobalt/60 flex items-center justify-between font-mono text-[11px] text-slateSoft/65">
+            <span>Early Formation</span>
+            <span class="text-gold">Alumnus</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================== -->
+  <!-- SECTION 04: CORE MATHEMATICAL DOMAINS & FOUNDATIONS MATRIX            -->
+  <!-- ===================================================================== -->
+  <section id="domains" class="py-16 sm:py-24 border-b border-cobalt/70">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Header & Branch Filter Tabs -->
+      <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 pb-8 border-b border-cobalt/70">
+        <div>
+          <span class="font-mono text-xs text-gold uppercase tracking-widest block mb-2">
+            04 // MATHEMATICAL ARCHITECTURE & DISCIPLINES
+          </span>
+          <h2 class="font-serif text-3xl sm:text-5xl font-bold text-ivory">
+            Core Mathematical <span class="italic text-coral">Domains</span>
+          </h2>
+          <p class="text-sm text-slateSoft/80 mt-2 max-w-xl">
+            Select any mathematical branch below to inspect its canonical theorems, foundational structures, and geometric or analytical intuition.
+          </p>
+        </div>
+
+        <!-- Clean Branch Filter Controls -->
+        <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+          <div class="inline-flex rounded-lg border border-cobalt bg-indigoAbyss p-1 font-mono text-xs">
+            <button type="button" data-filter="all" class="domain-filter-btn active px-3.5 py-2 rounded-md bg-coral text-indigoAbyss font-semibold transition-colors">
+              All Branches (06)
+            </button>
+            <button type="button" data-filter="Pure" class="domain-filter-btn px-3.5 py-2 rounded-md text-slateSoft hover:text-gold transition-colors">
+              Pure Mathematics
+            </button>
+            <button type="button" data-filter="Applied" class="domain-filter-btn px-3.5 py-2 rounded-md text-slateSoft hover:text-gold transition-colors">
+              Applied & Spatial
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Interactive Mathematical Domains Matrix & Theorem Inspector -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 pt-8 items-start">
+
+        <!-- LEFT: ARCHITECTURAL DOMAIN MATRIX (7 COLS) -->
+        <div class="lg:col-span-7 space-y-3">
+          <div class="flex items-center justify-between font-mono text-[11px] uppercase tracking-wider text-slateSoft/60 px-1">
+            <span>Select a Domain to Inspect Theorem & Structure</span>
+            <span id="domain-count-label">Showing 6 Domains</span>
+          </div>
+
+          <div id="domain-matrix-grid" class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+            <!-- Dynamically populated cleanly via JS -->
+          </div>
+        </div>
+
+        <!-- RIGHT: STICKY THEOREM & CONCEPT INSPECTOR CARD (5 COLS) -->
+        <div class="lg:col-span-5 lg:sticky lg:top-24">
+          <div id="theorem-inspector" class="academic-card rounded-xl p-6 sm:p-7 border-gold/50 space-y-5">
+            <!-- Top Branch & Domain Code -->
+            <div class="flex items-center justify-between border-b border-cobalt/70 pb-3.5">
+              <span id="insp-badge" class="font-mono text-xs font-semibold px-2.5 py-1 rounded bg-coral text-indigoAbyss">
+                DOMAIN 01 · PURE
+              </span>
+              <span id="insp-focus-tag" class="font-mono text-[11px] text-gold">
+                INFINITESIMAL ANALYSIS
+              </span>
+            </div>
+
+            <!-- Domain Title & Subtitle -->
+            <div>
+              <h3 id="insp-title" class="font-serif text-2xl sm:text-3xl font-bold text-ivory leading-snug">
+                Calculus & Real Analysis
+              </h3>
+              <p id="insp-subtitle" class="text-sm text-gold/90 font-medium mt-0.5">
+                Continuity, Rates of Change & Accumulation
+              </p>
+            </div>
+
+            <!-- Canonical Theorem & Equation Box -->
+            <div class="bg-indigoDeep border border-cobalt rounded-lg p-4">
+              <div id="insp-theorem-name" class="font-mono text-[10px] uppercase tracking-widest text-coral mb-1.5">
+                Fundamental Theorem of Calculus
+              </div>
+              <div id="insp-formula" class="font-mono text-xs sm:text-sm text-gold leading-relaxed break-words">
+                ∫ₐᵇ f'(x) dx = f(b) − f(a)   |   lim(h→0) [f(x+h) − f(x)] / h
+              </div>
+            </div>
+
+            <!-- Foundational Concepts -->
+            <div>
+              <div class="font-mono text-[11px] uppercase tracking-wider text-coral font-semibold mb-2">
+                Foundational Pillars
+              </div>
+              <ul id="insp-topics" class="space-y-2 text-xs sm:text-sm text-slateSoft/90">
+                <!-- Populated dynamically -->
+              </ul>
+            </div>
+
+            <!-- Geometric & Analytical Intuition Note -->
+            <div class="pt-4 border-t border-cobalt/60">
+              <div class="font-mono text-[10px] uppercase tracking-wider text-gold mb-1">
+                Geometric & Analytical Intuition
+              </div>
+              <p id="insp-intuition" class="text-xs text-slateSoft/80 leading-relaxed">
+                Bridges the local behavior of tangent slopes with global accumulation under curves, revealing differentiation and integration as inverse operations.
+              </p>
+            </div>
+
+            <!-- Prev / Next Domain Stepper -->
+            <div class="pt-2 flex items-center justify-between gap-3 font-mono text-xs">
+              <button type="button" id="prev-domain-btn" class="px-3.5 py-2 rounded-lg border border-cobalt bg-indigoDeep text-slateSoft hover:border-gold hover:text-gold transition-colors">
+                ← Prev Domain
+              </button>
+              <span id="insp-step-indicator" class="text-slateSoft/60 text-[11px]">01 / 06</span>
+              <button type="button" id="next-domain-btn" class="px-3.5 py-2 rounded-lg border border-cobalt bg-indigoDeep text-slateSoft hover:border-coral hover:text-coral transition-colors">
+                Next Domain →
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================== -->
+  <!-- SECTION 05: CAMPUS & JOSEPHITE MATH CLUB GALLERY                      -->
+  <!-- ===================================================================== -->
+  <section id="gallery" class="py-16 sm:py-24 border-b border-cobalt/70 bg-indigoDeep/65">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Single Unified Section Header -->
+      <div class="pb-8 border-b border-cobalt/70">
+        <span class="font-mono text-xs text-coral uppercase tracking-widest block mb-2">
+          05 // ARCHIVE & VISUAL CHRONICLE
+        </span>
+        <h2 class="font-serif text-3xl sm:text-5xl font-bold text-ivory">
+          Campus & Club <span class="italic text-gold">Gallery</span>
+        </h2>
+        <p class="text-sm text-slateSoft/80 mt-2 max-w-2xl">
+          A gallery of photographs.
+          <a href="https://www.facebook.com/princejuboraj" target="_blank" rel="noopener noreferrer" class="text-gold hover:text-coral transition-colors">fb.com/princejuboraj</a>.
+          Click any image to inspect it in full detail.
+        </p>
+      </div>
+
+      <!-- One unified image grid — no category splits -->
+      <div id="gallery-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 pt-10">
+        <!-- Populated from the Facebook photographs via JS -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================================================================== -->
+  <!-- GALLERY LIGHTBOX MODAL                                                -->
+  <!-- ===================================================================== -->
+  <div id="gallery-lightbox" class="fixed inset-0 z-50 hidden bg-indigoAbyss/95 backdrop-blur-md flex items-center justify-center p-4 sm:p-6" role="dialog" aria-modal="true" aria-labelledby="lightbox-title">
+    <div class="relative w-full max-w-3xl academic-card rounded-2xl border-gold/60 overflow-hidden shadow-2xl">
+      <!-- Top Bar -->
+      <div class="flex items-center justify-between px-5 py-3.5 bg-indigoDeep border-b border-cobalt/70 font-mono text-xs">
+        <div class="flex items-center gap-3">
+          <span id="lightbox-fig" class="px-2 py-0.5 rounded bg-coral text-indigoAbyss font-semibold">FIG. 01</span>
+          <span id="lightbox-cat" class="text-gold uppercase tracking-wider">FACEBOOK GALLERY</span>
+        </div>
+        <button type="button" id="lightbox-close" class="px-3 py-1 rounded-md border border-cobalt text-slateSoft hover:border-coral hover:text-coral transition-colors">
+          ESC / Close ✕
+        </button>
+      </div>
+
+      <!-- Visual Canvas / Image Area -->
+      <div id="lightbox-media" class="w-full bg-indigoAbyss flex items-center justify-center overflow-hidden max-h-[62vh]">
+        <!-- Injected dynamically -->
+      </div>
+
+      <!-- Caption & Stepper Footer -->
+      <div class="p-5 sm:p-6 bg-indigoDeep/90 border-t border-cobalt/70 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div class="space-y-1">
+          <h3 id="lightbox-title" class="font-serif text-2xl font-bold text-ivory">
+            Anthony Prince Costa
+          </h3>
+          <p id="lightbox-desc" class="text-xs sm:text-sm text-slateSoft/85 leading-relaxed">
+            Lecturer in Mathematics & Chief Moderator of Josephite Math Club, St. Joseph Higher Secondary School.
+          </p>
+        </div>
+        <div class="flex items-center gap-2 font-mono text-xs shrink-0">
+          <button type="button" id="lightbox-prev" class="px-3.5 py-2 rounded-lg border border-cobalt bg-indigoAbyss text-slateSoft hover:border-gold hover:text-gold transition-colors">
+            ← Prev
+          </button>
+          <button type="button" id="lightbox-next" class="px-3.5 py-2 rounded-lg border border-cobalt bg-indigoAbyss text-slateSoft hover:border-coral hover:text-coral transition-colors">
+            Next →
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================================================================== -->
+  <!-- SECTION 06: CLEAN, DIRECT ACADEMIC CONTACT SECTION                    -->
+  <!-- ===================================================================== -->
+  <section id="contact" class="py-16 sm:py-24 bg-indigoAbyss/80">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="pb-10 border-b border-cobalt/70">
+        <span class="font-mono text-xs text-coral uppercase tracking-widest block mb-2">
+          06 // DIRECT ACADEMIC CONTACT
+        </span>
+        <h2 class="font-serif text-3xl sm:text-5xl font-bold text-ivory">
+          Get in <span class="italic text-gold">Touch</span>
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 pt-10 items-stretch">
+
+        <!-- Direct Faculty Contact Card (7 Cols) -->
+        <div class="lg:col-span-7 academic-card rounded-xl p-6 sm:p-8 border-coral/60 flex flex-col justify-between space-y-6">
+          <div class="space-y-3">
+            <div class="inline-flex items-center gap-2 font-mono text-xs text-coral uppercase tracking-wider">
+              <span class="w-2 h-2 rounded-full bg-coral"></span>
+              <span>FACULTY CONTACT CARD</span>
+            </div>
+            <h3 class="font-serif text-3xl sm:text-4xl font-bold text-ivory">
+              Anthony Prince Costa
+            </h3>
+            <p class="text-sm text-slateSoft/85">
+              Lecturer in Mathematics · Chief Moderator, Josephite Math Club<br />
+              St. Joseph Higher Secondary School, Dhaka
+            </p>
+          </div>
+
+          <!-- Primary Phone Number Display -->
+          <div class="bg-indigoDeep border border-cobalt rounded-xl p-5 space-y-4">
+            <div class="flex flex-wrap items-center justify-between gap-2">
+              <span class="font-mono text-xs uppercase tracking-wider text-gold">
+                Direct Mobile & WhatsApp
+              </span>
+              <span class="font-mono text-[11px] text-slateSoft/60">Dhaka, Bangladesh</span>
+            </div>
+
+            <div class="font-mono text-2xl sm:text-3xl font-bold text-ivory tracking-tight">
+              +880 1720-242606
+            </div>
+
+            <div class="flex flex-wrap items-center gap-3 pt-1">
+              <a href="tel:+8801720242606" class="px-4 py-2.5 rounded-lg bg-coral text-indigoAbyss font-mono text-xs font-semibold uppercase tracking-wider hover:bg-gold transition-colors">
+                Call Now
+              </a>
+              <a href="https://wa.me/8801720242606" target="_blank" rel="noopener noreferrer" class="px-4 py-2.5 rounded-lg border border-gold text-gold font-mono text-xs font-semibold uppercase tracking-wider hover:bg-gold hover:text-indigoAbyss transition-colors">
+                WhatsApp
+              </a>
+              <button type="button" id="copy-phone-btn" class="px-4 py-2.5 rounded-lg border border-cobalt bg-indigoAbyss text-slateSoft font-mono text-xs uppercase tracking-wider hover:border-coral hover:text-coral transition-colors">
+                Copy Number
+              </button>
+            </div>
+            <div id="copy-feedback" class="hidden font-mono text-xs text-gold">
+              ✓ Copied +880 1720-242606 to clipboard.
+            </div>
+          </div>
+
+          <!-- Official Facebook Link -->
+          <div class="pt-2 flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-t border-cobalt/60 text-xs font-mono">
+            <span class="text-slateSoft/70">Official Social Profile:</span>
+            <a href="https://www.facebook.com/princejuboraj" target="_blank" rel="noopener noreferrer" class="text-gold hover:text-coral transition-colors inline-flex items-center gap-1.5 font-medium">
+              <span>https://www.facebook.com/princejuboraj</span>
+              <span>↗</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Inquiry Composer (5 Cols) -->
+        <div class="lg:col-span-5 academic-card rounded-xl p-6 sm:p-8 flex flex-col justify-between">
+          <div>
+            <div class="font-mono text-xs text-gold uppercase tracking-wider border-b border-cobalt/60 pb-3 mb-5">
+              Send a Direct WhatsApp Note
+            </div>
+
+            <form id="inquiry-form" class="space-y-4">
+              <div>
+                <label for="sender-name" class="block font-mono text-xs text-slateSoft/80 mb-1.5">Your Name *</label>
+                <input id="sender-name" type="text" required placeholder="e.g. Tanvir Rahman" class="w-full rounded-lg bg-indigoDeep border border-cobalt px-3.5 py-2.5 text-sm text-ivory placeholder-slateSoft/40 focus:outline-none focus:border-gold" />
+              </div>
+
+              <div>
+                <label for="sender-role" class="block font-mono text-xs text-slateSoft/80 mb-1.5">Affiliation / Role</label>
+                <input id="sender-role" type="text" placeholder="e.g. Student, Colleague, or Guardian" class="w-full rounded-lg bg-indigoDeep border border-cobalt px-3.5 py-2.5 text-sm text-ivory placeholder-slateSoft/40 focus:outline-none focus:border-gold" />
+              </div>
+
+              <div>
+                <label for="sender-message" class="block font-mono text-xs text-slateSoft/80 mb-1.5">Message *</label>
+                <textarea id="sender-message" rows="3" required placeholder="Write your academic inquiry..." class="w-full rounded-lg bg-indigoDeep border border-cobalt px-3.5 py-2.5 text-sm text-ivory placeholder-slateSoft/40 focus:outline-none focus:border-gold"></textarea>
+              </div>
+
+              <button type="submit" class="w-full py-3 rounded-lg bg-coral text-indigoAbyss font-mono text-xs font-semibold uppercase tracking-wider hover:bg-gold transition-colors">
+                Send via WhatsApp →
+              </button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================== -->
+  <!-- CLEAN ACADEMIC FOOTER                                                 -->
+  <!-- ===================================================================== -->
+  <footer class="bg-indigoAbyss border-t border-cobalt/70 py-8">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 font-mono text-xs text-slateSoft/70">
+      <div>
+        <span class="text-ivory font-semibold">Anthony Prince Costa</span> · Lecturer in Mathematics, St. Joseph Higher Secondary School (2012–Present)
+      </div>
+      <div class="flex items-center gap-5">
+        <a href="tel:+8801720242606" class="text-coral hover:text-gold transition-colors">+880 1720-242606</a>
+        <a href="https://www.facebook.com/princejuboraj" target="_blank" rel="noopener noreferrer" class="text-gold hover:text-coral transition-colors">Facebook</a>
+        <a href="#hero" class="text-slateSoft hover:text-ivory transition-colors">Top ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===================================================================== -->
+  <!-- JAVASCRIPT: CALM HERO CURVE + COMPLETE 20-CHAPTER HSC SYLLABUS MATRIX -->
+  <!-- ===================================================================== -->
+  <script>
+    (function () {
+      'use strict';
+
+      /* -------------------------------------------------------------------
+         4. UNIFIED FACEBOOK PHOTO GALLERY + LIGHTBOX
+      ------------------------------------------------------------------- */
+      const galleryItems = [
+        { src: 'gallery/fb-01.jpg', title: 'Profile Portrait', caption: 'Profile photograph from the public Facebook profile of Anthony Prince Costa.' },
+        { src: 'gallery/fb-02.jpg', title: 'Facebook Photograph 02', caption: 'Photograph sourced from the public Facebook profile fb.com/princejuboraj.' },
+        { src: 'gallery/fb-03.jpg', title: 'Facebook Photograph 03', caption: 'Photograph sourced from the public Facebook profile fb.com/princejuboraj.' },
+        { src: 'gallery/fb-04.jpg', title: 'Facebook Photograph 04', caption: 'Photograph sourced from the public Facebook profile fb.com/princejuboraj.' },
+        { src: 'gallery/fb-05.jpg', title: 'Facebook Photograph 05', caption: 'Photograph sourced from the public Facebook profile fb.com/princejuboraj.' },
+        { src: 'gallery/fb-06.jpg', title: 'Facebook Photograph 06', caption: 'Photograph sourced from the public Facebook profile fb.com/princejuboraj.' },
+        { src: 'gallery/fb-07.jpg', title: 'Facebook Photograph 07', caption: 'Photograph sourced from the public Facebook profile fb.com/princejuboraj.' },
+        { src: 'gallery/fb-08.jpg', title: 'Facebook Photograph 08', caption: 'Photograph sourced from the public Facebook profile fb.com/princejuboraj.' },
+        { src: 'gallery/fb-09.jpg', title: 'Facebook Photograph 09', caption: 'Photograph sourced from the public Facebook profile fb.com/princejuboraj.' },
+        { src: 'gallery/fb-10.png', title: 'Facebook Graphic 10', caption: 'Graphic image sourced from the public Facebook profile fb.com/princejuboraj.' },
+      ].map((photo, index) => ({
+        id: index + 1,
+        fig: `FIG. ${String(index + 1).padStart(2, '0')}`,
+        categoryLabel: 'Facebook Gallery',
+        title: photo.title,
+        subtitle: 'SOURCE · fb.com/princejuboraj',
+        caption: photo.caption,
+        src: photo.src
+      }));
+
+      const galleryGrid = document.getElementById('gallery-grid');
+      const lightbox = document.getElementById('gallery-lightbox');
+      const lightboxFig = document.getElementById('lightbox-fig');
+      const lightboxCat = document.getElementById('lightbox-cat');
+      const lightboxMedia = document.getElementById('lightbox-media');
+      const lightboxTitle = document.getElementById('lightbox-title');
+      const lightboxDesc = document.getElementById('lightbox-desc');
+      const lightboxClose = document.getElementById('lightbox-close');
+      const lightboxPrev = document.getElementById('lightbox-prev');
+      const lightboxNext = document.getElementById('lightbox-next');
+
+      let activeLightboxId = 1;
+
+      function openLightbox(itemId) {
+        const item = galleryItems.find(g => g.id === itemId) || galleryItems[0];
+        activeLightboxId = item.id;
+
+        lightboxFig.textContent = item.fig;
+        lightboxCat.textContent = item.categoryLabel.toUpperCase();
+        lightboxTitle.textContent = item.title;
+        lightboxDesc.textContent = item.caption;
+
+        lightboxMedia.innerHTML = `<img src="${item.src}" alt="${item.title}" class="max-h-[58vh] w-auto object-contain rounded-lg my-4 border border-gold/40" />`;
+
+        lightbox.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeLightbox() {
+        lightbox.classList.add('hidden');
+        document.body.style.overflow = '';
+      }
+
+      function renderGallery() {
+        if (!galleryGrid) return;
+
+        galleryGrid.innerHTML = galleryItems.map(item => {
+          return `
+            <button type="button" data-gallery-id="${item.id}" class="gallery-card academic-card rounded-xl overflow-hidden text-left border-cobalt hover:border-gold/80 transition-all group flex flex-col justify-between">
+              <div>
+                <div class="relative aspect-[3/2] w-full bg-indigoAbyss overflow-hidden border-b border-cobalt/60">
+                  <img src="${item.src}" alt="${item.title}" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" />
+                  <span class="absolute top-3 left-3 font-mono text-[10px] font-semibold px-2.5 py-1 rounded bg-indigoAbyss/90 border border-cobalt text-gold">
+                    ${item.fig}
+                  </span>
+                </div>
+                <div class="p-5 space-y-2">
+                  <div class="flex items-center justify-between font-mono text-[10px] uppercase tracking-wider">
+                    <span class="text-gold font-semibold">${item.categoryLabel}</span>
+                    <span class="text-slateSoft/60 group-hover:text-gold transition-colors">Inspect ↗</span>
+                  </div>
+                  <h3 class="font-serif text-xl sm:text-2xl font-bold text-ivory group-hover:text-gold transition-colors leading-snug">
+                    ${item.title}
+                  </h3>
+                  <p class="text-xs text-slateSoft/75 leading-relaxed line-clamp-2">
+                    ${item.caption}
+                  </p>
+                </div>
+              </div>
+              <div class="px-5 py-3 border-t border-cobalt/40 font-mono text-[10px] text-slateSoft/60">
+                ${item.subtitle}
+              </div>
+            </button>
+          `;
+        }).join('');
+
+        document.querySelectorAll('.gallery-card').forEach(card => {
+          card.addEventListener('click', () => {
+            const id = parseInt(card.getAttribute('data-gallery-id'), 10);
+            openLightbox(id);
+          });
+        });
+      }
+
+      if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
+      if (lightbox) {
+        lightbox.addEventListener('click', (e) => {
+          if (e.target === lightbox) closeLightbox();
+        });
+      }
+      if (lightboxPrev) {
+        lightboxPrev.addEventListener('click', () => {
+          const prevId = activeLightboxId > 1 ? activeLightboxId - 1 : galleryItems.length;
+          openLightbox(prevId);
+        });
+      }
+      if (lightboxNext) {
+        lightboxNext.addEventListener('click', () => {
+          const nextId = activeLightboxId < galleryItems.length ? activeLightboxId + 1 : 1;
+          openLightbox(nextId);
+        });
+      }
+      window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && lightbox && !lightbox.classList.contains('hidden')) {
+          closeLightbox();
+        }
+      });
+
+      /* -------------------------------------------------------------------
+         5. CONTACT CLIPBOARD & WHATSAPP NOTE COMPOSER
+      ------------------------------------------------------------------- */
+      const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      if (mobileMenuBtn && mobileMenu) {
+        mobileMenuBtn.addEventListener('click', () => {
+          mobileMenu.classList.toggle('hidden');
+        });
+        mobileMenu.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+        });
+      }
+
+      /* -------------------------------------------------------------------
+         2. CALM, GRACEFUL PARAMETRIC HERO CANVAS (ZERO CLUTTER)
+      ------------------------------------------------------------------- */
+      const heroCanvas = document.getElementById('hero-canvas');
+      const heroCtx = heroCanvas.getContext('2d');
+      let heroW = 0;
+      let heroH = 0;
+      let phase = 0;
+      let pointerOffset = { x: 0, y: 0 };
+      const dpr = Math.min(window.devicePixelRatio || 1, 2);
+
+      function resizeHero() {
+        if (!heroCanvas) return;
+        const rect = heroCanvas.parentElement.getBoundingClientRect();
+        heroW = rect.width;
+        heroH = rect.height;
+        heroCanvas.width = heroW * dpr;
+        heroCanvas.height = heroH * dpr;
+        heroCtx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      }
+
+      window.addEventListener('mousemove', (e) => {
+        pointerOffset.x = ((e.clientX / window.innerWidth) - 0.5) * 0.4;
+        pointerOffset.y = ((e.clientY / window.innerHeight) - 0.5) * 0.4;
+      }, { passive: true });
+
+      function animateCalmCurve() {
+        heroCtx.clearRect(0, 0, heroW, heroH);
+
+        const cy = heroH * 0.52;
+        const amp = Math.min(heroH * 0.22, 130);
+
+        // Subtle Primary Harmonic Wave (Cobalt)
+        heroCtx.beginPath();
+        heroCtx.strokeStyle = 'rgba(55, 48, 170, 0.75)';
+        heroCtx.lineWidth = 1.5;
+        for (let x = 0; x <= heroW; x += 4) {
+          const t = (x / heroW) * Math.PI * 3;
+          const y = cy + Math.sin(t + phase + pointerOffset.x) * amp * Math.cos(t * 0.5 - phase * 0.4);
+          if (x === 0) heroCtx.moveTo(x, y);
+          else heroCtx.lineTo(x, y);
+        }
+        heroCtx.stroke();
+
+        // Delicate Secondary Envelope Curve (Warm Gold, Low Opacity)
+        heroCtx.beginPath();
+        heroCtx.strokeStyle = 'rgba(255, 200, 92, 0.28)';
+        heroCtx.lineWidth = 1.2;
+        for (let x = 0; x <= heroW; x += 5) {
+          const t = (x / heroW) * Math.PI * 2.5;
+          const y = cy + Math.cos(t - phase * 0.7 + pointerOffset.y) * (amp * 0.78);
+          if (x === 0) heroCtx.moveTo(x, y);
+          else heroCtx.lineTo(x, y);
+        }
+        heroCtx.stroke();
+
+        // Thin Coral Accent Curve
+        heroCtx.beginPath();
+        heroCtx.strokeStyle = 'rgba(255, 101, 63, 0.24)';
+        heroCtx.lineWidth = 1.1;
+        for (let x = 0; x <= heroW; x += 6) {
+          const t = (x / heroW) * Math.PI * 4;
+          const y = cy + Math.sin(t * 0.75 + phase * 0.5) * (amp * 0.55);
+          if (x === 0) heroCtx.moveTo(x, y);
+          else heroCtx.lineTo(x, y);
+        }
+        heroCtx.stroke();
+
+        phase += 0.006; // Slow, dignified motion
+        requestAnimationFrame(animateCalmCurve);
+      }
+
+      /* -------------------------------------------------------------------
+         3. CORE MATHEMATICAL DOMAINS & FOUNDATIONS DATA
+      ------------------------------------------------------------------- */
+      const mathDomains = [
+        {
+          id: 1,
+          branch: 'Pure',
+          num: '01',
+          code: 'DOMAIN 01',
+          symbol: '∫',
+          title: 'Calculus & Real Analysis',
+          subtitle: 'Continuity, Rates of Change & Accumulation',
+          category: 'Infinitesimal Analysis',
+          theoremName: 'Fundamental Theorem of Calculus & ε–δ Continuity',
+          formula: "∫ₐᵇ f'(x) dx = f(b) − f(a)   |   f'(x) = lim(h→0) [f(x+h) − f(x)] / h",
+          topics: [
+            'Completeness of ℝ, limits, continuity, and differentiability from first principles',
+            'Differential calculus: chain rule, Taylor expansions, curvature & optimization',
+            'Riemann integration, differential equations, and convergence of infinite series'
+          ],
+          intuition: 'Bridges the local geometry of tangent lines with global accumulation under curves, revealing differentiation and integration as dual inverse operations.'
+        },
+        {
+          id: 2,
+          branch: 'Pure',
+          num: '02',
+          code: 'DOMAIN 02',
+          symbol: 'λ',
+          title: 'Linear Algebra & Matrix Theory',
+          subtitle: 'Vector Spaces, Linear Maps & Spectral Structure',
+          category: 'Abstract & Linear Structures',
+          theoremName: 'Invertibility & Spectral Eigenvalue Relation',
+          formula: 'A v = λ v   |   det(A − λI) = 0   |   A⁻¹ = (1 / det A) · adj(A)',
+          topics: [
+            'Vector spaces, linear independence, basis, dimension, and rank-nullity',
+            'Matrix decompositions, determinants as oriented volume scaling, and Cramer’s rule',
+            'Linear transformations, eigenvalues, eigenvectors, and diagonalization'
+          ],
+          intuition: 'Interprets matrices not merely as grids of numbers, but as geometric transformations that stretch, rotate, and shear space along invariant eigen-directions.'
+        },
+        {
+          id: 3,
+          branch: 'Applied',
+          num: '03',
+          code: 'DOMAIN 03',
+          symbol: '∠',
+          title: 'Analytic & Euclidean Geometry',
+          subtitle: 'Coordinate Loci, Conic Sections & Spatial Vectors',
+          category: 'Spatial & Coordinate Geometry',
+          theoremName: 'Unified Eccentricity & Orthogonality Conditions',
+          formula: 'SP / PM = e   |   x²/a² ± y²/b² = 1   |   A · B = |A||B| cosθ',
+          topics: [
+            'Cartesian and polar coordinate transformations, straight lines, and circles',
+            'Unified focus-directrix geometry of parabolas (e=1), ellipses (e<1), and hyperbolas (e>1)',
+            'Three-dimensional spatial vectors, scalar/cross products, and trigonometric identities'
+          ],
+          intuition: 'Translates pure spatial symmetry into algebraic invariants, allowing geometric loci and tangency to be reasoned about with complete precision.'
+        },
+        {
+          id: 4,
+          branch: 'Pure',
+          num: '04',
+          code: 'DOMAIN 04',
+          symbol: 'ℂ',
+          title: 'Complex Analysis & Number Theory',
+          subtitle: 'The Argand Plane, Polynomials & Discrete Counting',
+          category: 'Algebra & Complex Plane',
+          theoremName: 'Euler’s Formula & Fundamental Theorem of Algebra',
+          formula: 'e^(iθ) = cosθ + i sinθ   |   z = r e^(iθ)   |   1 + ω + ω² = 0',
+          topics: [
+            'Complex arithmetic, modulus-argument geometry, De Moivre’s theorem & roots of unity',
+            'Polynomial structure, Vieta’s symmetric root relations, and binomial expansions',
+            'Combinatorial enumeration, permutations, recurrence, and modular reasoning'
+          ],
+          intuition: 'Unifies algebra and trigonometry on the Argand plane, where complex multiplication becomes pure rotation and scaling.'
+        },
+        {
+          id: 5,
+          branch: 'Applied',
+          num: '05',
+          code: 'DOMAIN 05',
+          symbol: '∇',
+          title: 'Classical Mechanics & Applied Math',
+          subtitle: 'Equilibrium of Forces, Kinematics & Particle Dynamics',
+          category: 'Mathematical Physics',
+          theoremName: 'Lami’s Equilibrium & Parabolic Trajectory Law',
+          formula: 'P / sinα = Q / sinβ = R / sinγ   |   y = x tanα − (g x²) / (2u² cos²α)',
+          topics: [
+            'Statics: composition and resolution of concurrent forces, moments, and equilibrium',
+            'Kinematics: rectilinear acceleration, relative velocity, and constrained motion',
+            'Dynamics: projectile trajectories in a plane, Newton’s laws, and work-energy principles'
+          ],
+          intuition: 'Demonstrates how vector decomposition and differential equations govern physical motion and static equilibrium in the real world.'
+        },
+        {
+          id: 6,
+          branch: 'Applied',
+          num: '06',
+          code: 'DOMAIN 06',
+          symbol: 'σ',
+          title: 'Probability & Statistical Inference',
+          subtitle: 'Measure of Uncertainty, Distributions & Bayesian Logic',
+          category: 'Stochastic Reasoning',
+          theoremName: 'Bayes’ Theorem & Variance Decomposition',
+          formula: 'P(A|B) = [P(B|A) · P(A)] / P(B)   |   σ² = E[(X − μ)²]',
+          topics: [
+            'Axiomatic probability spaces, conditional probability, and independence',
+            'Bayes’ theorem for updating belief under empirical evidence',
+            'Measures of central tendency, dispersion, variance, and probability distributions'
+          ],
+          intuition: 'Provides a rigorous calculus for quantifying uncertainty, separating structural signal from random variation.'
+        }
+      ];
+
+      const domainMatrixGrid = document.getElementById('domain-matrix-grid');
+      const domainCountLabel = document.getElementById('domain-count-label');
+      const filterBtns = document.querySelectorAll('.domain-filter-btn');
+
+      // Inspector DOM Elements
+      const inspBadge = document.getElementById('insp-badge');
+      const inspFocusTag = document.getElementById('insp-focus-tag');
+      const inspTitle = document.getElementById('insp-title');
+      const inspSubtitle = document.getElementById('insp-subtitle');
+      const inspTheoremName = document.getElementById('insp-theorem-name');
+      const inspFormula = document.getElementById('insp-formula');
+      const inspTopics = document.getElementById('insp-topics');
+      const inspIntuition = document.getElementById('insp-intuition');
+      const inspStepIndicator = document.getElementById('insp-step-indicator');
+      const prevDomainBtn = document.getElementById('prev-domain-btn');
+      const nextDomainBtn = document.getElementById('next-domain-btn');
+
+      let currentFilter = 'all';
+      let selectedDomainId = 1;
+
+      function updateInspector(domainId) {
+        const domain = mathDomains.find(d => d.id === domainId) || mathDomains[0];
+        selectedDomainId = domain.id;
+
+        inspBadge.textContent = `${domain.code} · ${domain.branch.toUpperCase()}`;
+        inspBadge.className = domain.branch === 'Pure'
+          ? 'font-mono text-xs font-semibold px-2.5 py-1 rounded bg-coral text-indigoAbyss'
+          : 'font-mono text-xs font-semibold px-2.5 py-1 rounded bg-gold text-indigoAbyss';
+
+        inspFocusTag.textContent = domain.category.toUpperCase();
+        inspTitle.textContent = domain.title;
+        inspSubtitle.textContent = domain.subtitle;
+        inspTheoremName.textContent = domain.theoremName;
+        inspFormula.textContent = domain.formula;
+        inspTopics.innerHTML = domain.topics
+          .map(t => `<li class="flex items-start gap-2"><span class="text-coral font-mono mt-0.5">▸</span><span>${t}</span></li>`)
+          .join('');
+        inspIntuition.textContent = domain.intuition;
+        inspStepIndicator.textContent = `${domain.num} / 06`;
+
+        // Highlight active card in matrix
+        document.querySelectorAll('.domain-node').forEach(btn => {
+          const id = parseInt(btn.getAttribute('data-id'), 10);
+          if (id === selectedDomainId) {
+            btn.classList.add('border-gold', 'bg-cobalt/45');
+            btn.classList.remove('border-cobalt/80', 'bg-indigoAbyss/80');
+          } else {
+            btn.classList.remove('border-gold', 'bg-cobalt/45');
+            btn.classList.add('border-cobalt/80', 'bg-indigoAbyss/80');
+          }
+        });
+      }
+
+      function renderDomainMatrix() {
+        const filtered = currentFilter === 'all'
+          ? mathDomains
+          : mathDomains.filter(d => d.branch === currentFilter);
+
+        domainCountLabel.textContent = `Showing ${filtered.length} Domain${filtered.length > 1 ? 's' : ''}`;
+
+        domainMatrixGrid.innerHTML = filtered.map(domain => {
+          const isSelected = domain.id === selectedDomainId;
+          const borderClass = isSelected ? 'border-gold bg-cobalt/45' : 'border-cobalt/80 bg-indigoAbyss/80';
+          const codeColor = domain.branch === 'Pure' ? 'text-coral' : 'text-gold';
+
+          return `
+            <button type="button" data-id="${domain.id}" class="domain-node text-left p-4 rounded-xl border ${borderClass} hover:border-gold/80 transition-all group flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between font-mono text-[10px] mb-2">
+                  <span class="${codeColor} font-semibold">${domain.code} · ${domain.branch.toUpperCase()}</span>
+                  <span class="font-serif italic text-xl text-gold/80 group-hover:text-coral transition-colors">${domain.symbol}</span>
+                </div>
+                <div class="font-serif text-xl font-bold text-ivory group-hover:text-gold transition-colors leading-snug">
+                  ${domain.title}
+                </div>
+                <div class="text-xs text-slateSoft/70 mt-1 leading-relaxed">
+                  ${domain.subtitle}
+                </div>
+              </div>
+              <div class="mt-3 pt-2.5 border-t border-cobalt/40 font-mono text-[10px] text-slateSoft/55 group-hover:text-gold/90 flex items-center justify-between">
+                <span>${domain.category}</span>
+                <span>Inspect →</span>
+              </div>
+            </button>
+          `;
+        }).join('');
+
+        document.querySelectorAll('.domain-node').forEach(btn => {
+          btn.addEventListener('click', () => {
+            const id = parseInt(btn.getAttribute('data-id'), 10);
+            updateInspector(id);
+          });
+        });
+      }
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          currentFilter = btn.getAttribute('data-filter');
+          filterBtns.forEach(b => {
+            b.classList.remove('active', 'bg-coral', 'text-indigoAbyss', 'font-semibold');
+            b.classList.add('text-slateSoft');
+          });
+          btn.classList.add('active', 'bg-coral', 'text-indigoAbyss', 'font-semibold');
+          btn.classList.remove('text-slateSoft');
+
+          renderDomainMatrix();
+
+          const visible = currentFilter === 'all'
+            ? mathDomains
+            : mathDomains.filter(d => d.branch === currentFilter);
+          if (visible.length > 0 && !visible.some(d => d.id === selectedDomainId)) {
+            updateInspector(visible[0].id);
+          }
+        });
+      });
+
+      if (prevDomainBtn) {
+        prevDomainBtn.addEventListener('click', () => {
+          const prevId = selectedDomainId > 1 ? selectedDomainId - 1 : 6;
+          if (currentFilter !== 'all') {
+            currentFilter = 'all';
+            filterBtns.forEach(b => {
+              b.classList.remove('active', 'bg-coral', 'text-indigoAbyss', 'font-semibold');
+              b.classList.add('text-slateSoft');
+              if (b.getAttribute('data-filter') === 'all') {
+                b.classList.add('active', 'bg-coral', 'text-indigoAbyss', 'font-semibold');
+                b.classList.remove('text-slateSoft');
+              }
+            });
+            renderDomainMatrix();
+          }
+          updateInspector(prevId);
+        });
+      }
+
+      if (nextDomainBtn) {
+        nextDomainBtn.addEventListener('click', () => {
+          const nextId = selectedDomainId < 6 ? selectedDomainId + 1 : 1;
+          if (currentFilter !== 'all') {
+            currentFilter = 'all';
+            filterBtns.forEach(b => {
+              b.classList.remove('active', 'bg-coral', 'text-indigoAbyss', 'font-semibold');
+              b.classList.add('text-slateSoft');
+              if (b.getAttribute('data-filter') === 'all') {
+                b.classList.add('active', 'bg-coral', 'text-indigoAbyss', 'font-semibold');
+                b.classList.remove('text-slateSoft');
+              }
+            });
+            renderDomainMatrix();
+          }
+          updateInspector(nextId);
+        });
+      }
+
+      /* -------------------------------------------------------------------
+         4. CONTACT CLIPBOARD & WHATSAPP NOTE COMPOSER
+      ------------------------------------------------------------------- */
+      function copyText(text) {
+        const el = document.createElement('textarea');
+        el.value = text;
+        el.style.position = 'fixed';
+        el.style.opacity = '0';
+        document.body.appendChild(el);
+        el.select();
+        try {
+          document.execCommand('copy');
+        } catch (err) {
+          // Handled safely
+        }
+        document.body.removeChild(el);
+      }
+
+      const copyPhoneBtn = document.getElementById('copy-phone-btn');
+      const copyFeedback = document.getElementById('copy-feedback');
+      if (copyPhoneBtn) {
+        copyPhoneBtn.addEventListener('click', () => {
+          copyText('+880 1720-242606');
+          copyPhoneBtn.textContent = 'Copied!';
+          if (copyFeedback) copyFeedback.classList.remove('hidden');
+          setTimeout(() => {
+            copyPhoneBtn.textContent = 'Copy Number';
+            if (copyFeedback) copyFeedback.classList.add('hidden');
+          }, 2500);
+        });
+      }
+
+      const inquiryForm = document.getElementById('inquiry-form');
+      if (inquiryForm) {
+        inquiryForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const name = document.getElementById('sender-name').value.trim();
+          const role = document.getElementById('sender-role').value.trim();
+          const msg = document.getElementById('sender-message').value.trim();
+          const intro = role
+            ? `Greetings Sir,\nFrom: ${name} (${role})`
+            : `Greetings Sir,\nFrom: ${name}`;
+          const encoded = encodeURIComponent(`${intro}\n\n${msg}`);
+          window.open(`https://wa.me/8801720242606?text=${encoded}`, '_blank', 'noopener,noreferrer');
+        });
+      }
+
+      /* -------------------------------------------------------------------
+         5. INITIALIZE ON LOAD & RESIZE
+      ------------------------------------------------------------------- */
+      window.addEventListener('resize', resizeHero);
+      window.onload = function () {
+        resizeHero();
+        animateCalmCurve();
+        renderDomainMatrix();
+        updateInspector(1);
+        renderGallery();
+      };
+    })();
+  </script>
+</body>
+</html>
