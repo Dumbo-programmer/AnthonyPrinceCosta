@@ -1,0 +1,72 @@
+    :root {
+      --bg-primary: #16115E;
+      --bg-abyss: #0F0B46;
+      --surface-cobalt: #3730AA;
+      --accent-coral: #FF653F;
+      --accent-gold: #FFC85C;
+      --text-ivory: #F8FAFC;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      background-color: var(--bg-primary);
+      color: var(--text-ivory);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      overflow-x: hidden;
+      max-width: 100vw;
+    }
+
+    /* Refined precision scrollbar */
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0F0B46;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #3730AA;
+      border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #FF653F;
+    }
+
+    /* Subtle architectural coordinate grid */
+    .subtle-math-grid {
+      background-image:
+        linear-gradient(to right, rgba(55, 48, 170, 0.22) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(55, 48, 170, 0.22) 1px, transparent 1px);
+      background-size: 64px 64px;
+    }
+
+    /* Anchor targets clear the sticky header */
+    section[id] {
+      scroll-margin-top: 4.5rem;
+    }
+
+    /* Visible keyboard focus on every interactive element */
+    a:focus-visible,
+    button:focus-visible,
+    input:focus-visible,
+    textarea:focus-visible {
+      outline: 2px solid #FFC85C;
+      outline-offset: 3px;
+      border-radius: 6px;
+    }
+
+    /* Respect users who prefer less motion */
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+      .nav-underline::after { transition: none; }
+    }

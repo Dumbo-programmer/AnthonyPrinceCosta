@@ -1,0 +1,143 @@
+    :root {
+      --abyss: #0F0B46;
+      --deep: #16115E;
+      --cobalt: #3730AA;
+      --coral: #FF653F;
+      --gold: #FFC85C;
+      --ink: #1E293B;
+      --muted: #64748B;
+      --paper: #FFFFFF;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: #E2E8F0;
+      color: var(--ink);
+      font-family: "Segoe UI", Arial, sans-serif;
+      line-height: 1.55;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    .toolbar {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 18px 16px 0;
+      display: flex;
+      gap: 12px;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+    }
+    .ico { width: 14px; height: 14px; flex: none; }
+    .ico path, .ico circle {
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .ico text { fill: currentColor; }
+    .toolbar a, .toolbar button {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font: 600 12px/1 "Consolas", "Courier New", monospace;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 10px 14px;
+      border-radius: 8px;
+      cursor: pointer;
+      border: 1px solid var(--cobalt);
+      color: var(--deep);
+      background: #fff;
+    }
+    .toolbar button { background: var(--deep); color: #F8FAFC; border-color: var(--deep); }
+    .toolbar a:hover { border-color: var(--coral); color: var(--coral); }
+    .toolbar button:hover { background: var(--coral); border-color: var(--coral); color: var(--abyss); }
+    .sheet {
+      max-width: 900px;
+      margin: 18px auto 48px;
+      background: var(--paper);
+      box-shadow: 0 24px 60px rgba(15, 11, 70, .18);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .masthead {
+      background: var(--deep);
+      color: #F8FAFC;
+      padding: 34px 40px 30px;
+      border-bottom: 5px solid var(--gold);
+    }
+    .masthead .eyebrow {
+      font: 600 11px/1 "Consolas", "Courier New", monospace;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin: 0 0 10px;
+    }
+    .masthead h1 { margin: 0; font: 700 38px/1.1 Georgia, serif; letter-spacing: -.02em; }
+    .masthead h1 em { color: var(--gold); }
+    .masthead .role {
+      margin: 10px 0 0;
+      font: 600 12px/1.6 "Consolas", "Courier New", monospace;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: #E2E8F0;
+    }
+    .contact-line {
+      margin-top: 16px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 20px;
+      font: 500 12px/1.5 "Consolas", "Courier New", monospace;
+    }
+    .contact-line span, .contact-line a {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .contact-line a { color: var(--gold); text-decoration: none; }
+    .contact-line a:hover { color: var(--coral); }
+    .body { padding: 32px 40px 40px; }
+    section { margin: 0 0 28px; break-inside: avoid; }
+    h2 {
+      margin: 0 0 14px;
+      font: 700 13px/1 "Consolas", "Courier New", monospace;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--deep);
+      border-bottom: 2px solid var(--cobalt);
+      padding-bottom: 10px;
+    }
+    .item { margin: 0 0 16px; break-inside: avoid; }
+    .item:last-child { margin-bottom: 0; }
+    .item h3 { margin: 0; font: 700 16px/1.4 Georgia, serif; color: var(--ink); }
+    .item .meta {
+      font: 600 11px/1.5 "Consolas", "Courier New", monospace;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      color: var(--coral);
+      margin: 3px 0 4px;
+    }
+    .item p { margin: 0; font-size: 13.5px; color: #334155; }
+    ul { margin: 0; padding-left: 18px; font-size: 13.5px; color: #334155; }
+    li { margin-bottom: 6px; }
+    .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+    .chip {
+      font: 600 11px/1 "Consolas", "Courier New", monospace;
+      padding: 7px 10px;
+      border: 1px solid var(--cobalt);
+      border-radius: 999px;
+      color: var(--deep);
+      background: #F8FAFC;
+    }
+    @page { size: A4; margin: 14mm; }
+    @media print {
+      body { background: #fff; }
+      .toolbar { display: none; }
+      .sheet { margin: 0; box-shadow: none; border-radius: 0; }
+      .masthead { padding: 22px 26px; }
+      .body { padding: 24px 26px; }
+      .masthead h1 { font-size: 30px; }
+      section { margin-bottom: 20px; }
+    }
