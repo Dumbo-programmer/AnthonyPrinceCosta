@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dumbo-programmer.github.io/AnthonyPrinceCosta/sitemap.xml
